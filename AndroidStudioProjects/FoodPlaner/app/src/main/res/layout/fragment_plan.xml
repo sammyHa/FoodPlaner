@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.PlanFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paln Fragment"
+        android:textSize="30sp"
+        android:layout_gravity="center_horizontal"
+        />
+    <Button
+        android:id="@+id/open_food_fact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Food Facts"
+        android:textAllCaps="false"
+        android:clickable="true"
+        android:background="@color/black_70"
+        android:padding="20dp"
+        android:textColor="@color/buttonTextWhiteColor"
+        android:layout_gravity="center_horizontal|center_vertical"
+        />
+</FrameLayout>

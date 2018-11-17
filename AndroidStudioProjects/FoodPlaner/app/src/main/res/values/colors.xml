@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#068BE7</color>
+    <color name="colorPrimaryDark">#1AA3FF</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="navTextColor">#FFFFFF</color>
+
+    <color name="gradientStartColor">#1AA3FF</color>
+    <color name="gradientEndColor">#87CEFE</color>
+
+    <color name="gradientBackgoundStartColor">#1375B8</color>
+    <color name="gradientBackgoundEndColor">#1AA3FF</color>
+
+    <color name="SignupEditTextBackgroundColor">#f7f7f7</color>
+
+    <color name="buttonStrokeColor">#1AA3FF</color>
+    <color name="editTextStrokeColor">#707070</color>
+    <color name="buttonTextBlackColor">#363636</color>
+    <color name="buttonTextWhiteColor">#FFFFFF</color>
+    <color name="dateCircleCheckedGreenColor">#4BAB01</color>
+    <color name="dateCircleCurrentDayColor">#068BE7</color>
+    <color name="dateCircleFutureDayStrokeColor">#878787</color>
+    <color name="dateTextMonthColor">#363636</color>
+    <color name="daysOfTheWeekTextColor">#878787</color>
+    <color name="itemIconTintColor">#CECECE</color>
+    <color name="fabBackgrounColor">#e2b2b2b2</color>
+
+
+    <color name="active_dots">#ffffff</color>
+    <color name="inactive_dots">#75b6b6b6</color>
+    <color name="black_70">#70000000</color>
+
+    <color name="horizontal_line_color">#a4a4a4</color>
+
+
+</resources>

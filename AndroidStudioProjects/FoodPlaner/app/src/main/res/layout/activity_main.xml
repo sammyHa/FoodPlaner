@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.MainActivity">
+
+    <!-- Horizontal Calender -->
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation">
+
+
+    </FrameLayout>
+
+    <!--<com.github.clans.fab.FloatingActionMenu-->
+        <!--android:id="@+id/floating_action_menu"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_above="@id/bottom_navigation"-->
+        <!--app:menu_fab_label=""-->
+        <!--android:background="@android:color/transparent"-->
+        <!--app:menu_labels_paddingRight="20dp"-->
+        <!--app:menu_labels_paddingLeft="20dp"-->
+        <!--app:menu_labels_paddingBottom="5dp"-->
+        <!--app:menu_labels_paddingTop="5dp"-->
+        <!--app:menu_labels_textColor="@color/colorPrimaryDark"-->
+        <!--fab:menu_colorNormal="@color/colorPrimary"-->
+        <!--fab:menu_colorPressed="@color/colorPrimaryDark"-->
+        <!--fab:menu_colorRipple="#99FFFFFF"-->
+        <!--fab:menu_animationDelayPerItem="50"-->
+
+        <!--android:layout_margin="10dp"-->
+
+        <!--app:menu_openDirection="up"-->
+        <!--app:menu_labels_colorNormal="@color/buttonTextWhiteColor"-->
+        <!--app:menu_showShadow="false">-->
+
+       <!--<com.github.clans.fab.FloatingActionButton-->
+           <!--android:id="@+id/fab_snacks"-->
+           <!--android:layout_width="wrap_content"-->
+           <!--android:layout_height="wrap_content"-->
+           <!--app:fab_size="mini"-->
+           <!--app:backgroundTint="@color/colorPrimaryDark"-->
+           <!--android:src="@drawable/ic_shop"-->
+           <!--app:fab_colorPressed="@color/colorPrimaryDark"-->
+           <!--app:fab_label="Snacks"-->
+           <!--app:fab_colorRipple="@color/colorPrimary"-->
+           <!--app:rippleColor="@color/colorPrimary"-->
+           <!--app:fab_colorNormal="@color/colorPrimary"-->
+
+           <!--/>-->
+
+        <!--<com.github.clans.fab.FloatingActionButton-->
+            <!--android:id="@+id/fab_dinner"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:fab_size="mini"-->
+            <!--app:menu_labels_paddingRight="15dp"-->
+            <!--app:menu_labels_paddingLeft="15dp"-->
+            <!--app:backgroundTint="@color/colorPrimaryDark"-->
+            <!--android:src="@drawable/ic_shop"-->
+            <!--app:fab_label="Dinner"-->
+            <!--app:fab_colorNormal="@color/colorPrimary"-->
+            <!--app:fab_colorPressed="@color/colorPrimaryDark"-->
+
+
+            <!--app:rippleColor="@color/colorPrimary"-->
+            <!--/>-->
+        <!--<com.github.clans.fab.FloatingActionButton-->
+            <!--android:id="@+id/fab_lunch"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:fab_size="mini"-->
+            <!--app:backgroundTint="@color/colorPrimaryDark"-->
+            <!--android:src="@drawable/ic_shop"-->
+            <!--app:fab_label="Lunch"-->
+            <!--app:fab_colorNormal="@color/colorPrimary"-->
+            <!--app:fab_colorPressed="@color/colorPrimaryDark"-->
+
+
+            <!--app:rippleColor="@color/colorPrimary"-->
+            <!--/>-->
+
+        <!--<com.github.clans.fab.FloatingActionButton-->
+            <!--android:id="@+id/fab_breakfast"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:fab_size="mini"-->
+            <!--app:fab_colorNormal="@color/colorPrimary"-->
+            <!--app:backgroundTint="@color/colorPrimaryDark"-->
+            <!--android:src="@drawable/ic_shop"-->
+            <!--app:fab_label="Breakfast"-->
+            <!--app:rippleColor="@color/colorPrimary"-->
+            <!--app:fab_colorPressed="@color/colorPrimaryDark"-->
+
+            <!--/>-->
+    <!--</com.github.clans.fab.FloatingActionMenu>-->
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        app:itemTextColor="@color/buttonTextWhiteColor"
+        app:menu="@menu/navigation"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@drawable/bottom_nav_icon_color"/>
+
+</RelativeLayout>

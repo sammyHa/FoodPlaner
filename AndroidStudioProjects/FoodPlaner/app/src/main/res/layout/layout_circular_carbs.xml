@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/gradient_pager_background"
+    >
+
+
+    <ProgressBar
+        android:id="@+id/circularCarbsProgressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="75"
+        android:progressDrawable="@drawable/circular"
+        android:secondaryProgress="100" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="Carbs"
+        android:textColor="@color/buttonTextWhiteColor"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/textview_oneside_raduis"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:id="@+id/tv_carbs_percentage_consumed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="75%"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="4dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/buttonTextWhiteColor"
+        />
+    <TextView
+        android:id="@+id/tv_carbs_consumed_grams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="205 / 300g"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:padding="4dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/tv_carbs_percentage_consumed"
+        android:textColor="@color/buttonTextWhiteColor"
+
+        />
+
+</RelativeLayout>

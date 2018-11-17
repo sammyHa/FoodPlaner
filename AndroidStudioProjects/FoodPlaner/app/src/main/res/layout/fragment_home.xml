@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/home_fragment_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.HomeFragment"
+    android:background="#ffffff">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+    </android.support.v4.view.ViewPager>
+
+
+    <LinearLayout
+        android:id="@+id/layoutDots"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="230dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <RelativeLayout
+        android:layout_below="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        >
+
+
+        <TextView
+            android:id="@+id/tv_cal_goal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2319"
+            android:textSize="12dp"
+            />
+        <TextView
+            android:id="@+id/tv_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Goal"
+            android:textSize="10dp"
+            android:layout_below="@id/tv_cal_goal"
+
+            />
+
+
+        <TextView
+            android:id="@+id/tv_cal_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="607"
+            android:textSize="12sp"
+            android:layout_toRightOf="@id/food_negitive_operator"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:id="@+id/tv_exercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food"
+            android:textSize="10sp"
+            android:layout_marginStart="25dp"
+            android:layout_toRightOf="@id/food_negitive_operator"
+            android:layout_below="@id/tv_cal_food"
+            />
+
+        <TextView
+            android:id="@+id/exercise_negative_operator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_food"
+            android:layout_marginTop="-12dp"
+            android:layout_marginStart="25dp"
+            android:layout_toRightOf="@id/tv_cal_food"
+            android:text="+"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/food_negitive_operator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_food"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="-11dp"
+            android:layout_toRightOf="@id/tv_cal_goal"
+            android:text="-"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_cal_exercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_toRightOf="@id/exercise_negative_operator"
+            android:text="202"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_goal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exercise"
+            android:textSize="10dp"
+            android:layout_marginStart="25dp"
+            android:layout_toRightOf="@id/exercise_negative_operator"
+            android:layout_below="@id/tv_cal_exercise"
+            />
+
+        <TextView
+            android:id="@+id/equal_operator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_food"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="-12dp"
+            android:layout_toRightOf="@id/tv_cal_exercise"
+            android:text="="
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_cal_remain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_toRightOf="@id/equal_operator"
+            android:text="1914"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_remain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remaining"
+            android:textSize="10sp"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@id/equal_operator"
+            android:layout_below="@id/tv_cal_remain"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/disabled_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:alpha="0.25"
+        android:visibility="gone"
+        />
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/floating_action_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/bottom_navigation"
+        app:menu_fab_label=""
+        android:background="@android:color/transparent"
+        app:menu_labels_paddingRight="20dp"
+        app:menu_labels_paddingLeft="20dp"
+        app:menu_labels_paddingBottom="5dp"
+        app:menu_labels_paddingTop="5dp"
+        app:menu_labels_textColor="@color/colorPrimaryDark"
+        fab:menu_colorNormal="@color/colorPrimary"
+        fab:menu_colorPressed="@color/colorPrimaryDark"
+        fab:menu_colorRipple="#99FFFFFF"
+        fab:menu_animationDelayPerItem="50"
+
+        android:layout_margin="10dp"
+
+        app:menu_openDirection="up"
+        app:menu_labels_colorNormal="@color/buttonTextWhiteColor"
+        app:menu_showShadow="false">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_snacks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:backgroundTint="@color/colorPrimaryDark"
+            android:src="@drawable/ic_shop"
+            app:fab_colorPressed="@color/colorPrimaryDark"
+            app:fab_label="Snacks"
+            app:fab_colorRipple="@color/colorPrimary"
+            app:rippleColor="@color/colorPrimary"
+            app:fab_colorNormal="@color/colorPrimary"
+
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_dinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:menu_labels_paddingRight="15dp"
+            app:menu_labels_paddingLeft="15dp"
+            app:backgroundTint="@color/colorPrimaryDark"
+            android:src="@drawable/ic_shop"
+            app:fab_label="Dinner"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimaryDark"
+
+
+            app:rippleColor="@color/colorPrimary"
+            />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_lunch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:backgroundTint="@color/colorPrimaryDark"
+            android:src="@drawable/ic_shop"
+            app:fab_label="Lunch"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimaryDark"
+
+
+            app:rippleColor="@color/colorPrimary"
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_breakfast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:backgroundTint="@color/colorPrimaryDark"
+            android:src="@drawable/ic_shop"
+            app:fab_label="Breakfast"
+            app:rippleColor="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimaryDark"
+
+            />
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+</RelativeLayout>

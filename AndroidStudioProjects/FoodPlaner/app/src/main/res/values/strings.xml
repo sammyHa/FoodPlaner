@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FoodPlaner</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_home">Home</string>
+    <string name="title_recipes">Recipes</string>
+    <string name="title_plans">Plans</string>
+    <string name="title_profile">Profile</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="grams">%1$d%2$s </string>
+    <string name="search_food">Search food</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

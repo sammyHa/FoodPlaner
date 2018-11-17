@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="0dp"
+
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/search_box"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="#70e1e1e1"
+            android:drawableStart="@drawable/ic_search"
+            android:hint="@string/search_food"
+            android:importantForAutofill="no"
+            android:inputType="textAutoCorrect"
+            android:padding="10dp"
+            android:textColorHint="@color/black_70"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:imeOptions="actionSearch"
+
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="48dp"
+            android:id="@+id/search_result_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

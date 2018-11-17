@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/buttonStrokeColor"
+        android:layout_marginTop="40dp"
+        />
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_gradient_style"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/sign_up"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textColor="@color/signup_text_color" />
+
+    <Button
+        android:id="@+id/btn_signin"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_stroke_style"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:text="@string/sign_in"
+        android:textColor="@color/signin_text_color"
+        android:textAllCaps="false"
+        android:layout_below="@id/btn_signup" />
+</RelativeLayout>

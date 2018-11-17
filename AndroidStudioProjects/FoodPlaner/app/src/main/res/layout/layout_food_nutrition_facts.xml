@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:fitsSystemWindows="true"
+            android:id="@+id/toolbar_nutirtion_fact"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/ic_arrow"-->
+                    <!--android:clickable="true"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@drawable/ic_arrow"-->
+                    <!--android:layout_marginEnd="20dp"-->
+                    <!--android:layout_alignParentRight="false"-->
+                    <!--/>-->
+                <TextView
+                    android:id="@+id/meal_nutrition_fact_toolbar_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Breakfast"
+                    android:textColor="@color/buttonTextWhiteColor"
+                    android:layout_toEndOf="@+id/ic_arrow"
+                    android:textStyle="bold"
+                    />
+                <ImageView
+                    android:clickable="true"
+                    android:id="@+id/checked_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_check"
+                    android:layout_marginEnd="20dp"
+                    android:layout_alignParentEnd="true"
+                    />
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+        <TextView
+            android:layout_below="@id/toolbar_nutirtion_fact"
+            android:id="@+id/tv_detial_food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Dairy Cheese, caraway" />
+
+        <View
+            android:id="@+id/horizontal_line1"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_food_name"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:id="@+id/tv_detial_serving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line1"
+            android:layout_marginStart="20dp"
+            android:text="Serving" />
+
+        <TextView
+            android:id="@+id/tv_detial_number_serving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:text="1" />
+
+        <View
+            android:id="@+id/horizontal_line2"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_number_serving"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:id="@+id/tv_detial_serving_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line2"
+            android:layout_marginStart="20dp"
+            android:text="Serving Size" />
+
+        <TextView
+            android:id="@+id/tv_detial_serving_size_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:text="3.0 oz" />
+
+        <View
+            android:id="@+id/horizontal_line3"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_serving_size"
+            android:layout_margin="10dp" />
+
+
+        <ProgressBar
+            android:id="@+id/Progressbar_detial_cal"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:layout_below="@id/horizontal_line3"
+            android:layout_marginLeft="-23dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="35"
+            android:progressDrawable="@drawable/circular_fat"
+            android:secondaryProgress="100" />
+
+        <TextView
+            android:id="@+id/tv_detail_cal_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line3"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="30dp"
+            android:text="2,720" />
+
+        <TextView
+            android:id="@+id/tv_detail_cal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_detail_cal_value"
+            android:layout_marginStart="43dp"
+            android:text="Cal" />
+
+        <TextView
+            android:id="@+id/tv_detail_carbs_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line3"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="20dp"
+            android:text="4%" />
+
+        <TextView
+            android:id="@+id/tv_detail_carbs_grams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_detail_carbs_percentage"
+            android:layout_alignStart="@id/tv_detail_carbs_percentage"
+            android:text="1g" />
+
+        <TextView
+            android:id="@+id/tv_detail_carbs_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_detail_carbs_grams"
+            android:layout_alignStart="@id/tv_detail_carbs_percentage"
+            android:text="Carbs" />
+
+
+        <TextView
+            android:id="@+id/tv_detail_fat_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line3"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/tv_detail_carbs_percentage"
+            android:text="14%" />
+
+        <TextView
+            android:id="@+id/tv_detail_fat_grams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_detail_carbs_percentage"
+            android:layout_alignStart="@id/tv_detail_fat_percentage"
+            android:layout_toEndOf="@id/tv_detail_carbs_grams"
+            android:text="21g" />
+
+        <TextView
+            android:id="@+id/tv_detail_fat_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_detail_fat_grams"
+            android:layout_alignStart="@id/tv_detail_fat_percentage"
+            android:layout_toEndOf="@id/tv_detail_carbs_text"
+            android:text="Fat" />
+
+        <TextView
+            android:id="@+id/tv_detail_protein_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line3"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/tv_detail_fat_percentage"
+            android:text="14%" />
+
+        <TextView
+            android:id="@+id/tv_detail_protein_grams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_detail_protein_percentage"
+            android:layout_alignStart="@id/tv_detail_protein_percentage"
+            android:layout_toEndOf="@id/tv_detail_fat_grams"
+            android:text="21g" />
+
+        <TextView
+            android:id="@+id/tv_detail_protein_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_detail_protein_grams"
+            android:layout_alignStart="@id/tv_detail_protein_grams"
+            android:layout_toEndOf="@id/tv_detail_fat_text"
+            android:text="Protein" />
+
+
+        <View
+            android:id="@+id/horizontal_line4"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detail_protein_text"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_percentage_daily_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line4"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Percentage of Your Daily Goal" />
+
+        <TextView
+            android:id="@+id/tv_percentage_daily_cal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_percentage_daily_text"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Calories"
+            android:textSize="10sp"
+
+            />
+
+        <ProgressBar
+            android:id="@+id/detail_daily_cal_goal_percentage_progress"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_percentage_daily_cal_text"
+            android:layout_alignStart="@id/tv_percentage_daily_cal_text"
+            android:progress="40"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_percentage_daily_cal_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_daily_cal_goal_percentage_progress"
+            android:layout_alignStart="@id/detail_daily_cal_goal_percentage_progress"
+            android:text="12%"
+            android:textSize="10sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_percentage_daily_cal_value_grams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_daily_cal_goal_percentage_progress"
+            android:layout_alignEnd="@id/detail_daily_cal_goal_percentage_progress"
+            android:text="2740"
+            android:textSize="10sp" />
+
+
+        <TextView
+            android:id="@+id/tv_percentage_daily_carbs_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_percentage_daily_text"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="10dp"
+            android:text="Carbs"
+            android:textSize="10sp"
+
+            />
+
+        <ProgressBar
+            android:id="@+id/detail_daily_carbs_goal_percentage_progress"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_percentage_daily_cal_text"
+            android:layout_alignStart="@id/tv_percentage_daily_carbs_text"
+            android:progress="20"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_percentage_daily_carbs_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_daily_cal_goal_percentage_progress"
+            android:layout_alignStart="@id/tv_percentage_daily_carbs_text"
+            android:text="12%"
+            android:textSize="10sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_percentage_daily_carbs_value_grams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_daily_cal_goal_percentage_progress"
+            android:layout_alignEnd="@id/detail_daily_carbs_goal_percentage_progress"
+            android:text="2740"
+            android:textSize="10sp" />
+
+
+        <TextView
+            android:id="@+id/tv_percentage_daily_fat_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_percentage_daily_text"
+            android:layout_marginStart="193dp"
+            android:layout_marginTop="10dp"
+            android:text="Fat"
+            android:textSize="10sp"
+
+            />
+
+        <ProgressBar
+            android:id="@+id/detail_daily_fat_goal_percentage_progress"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_percentage_daily_cal_text"
+            android:layout_alignStart="@id/tv_percentage_daily_fat_text"
+            android:progress="20"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_percentage_daily_fat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_daily_cal_goal_percentage_progress"
+            android:layout_alignStart="@id/tv_percentage_daily_fat_text"
+            android:text="12%"
+            android:textSize="10sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_percentage_daily_fat_value_grams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_daily_cal_goal_percentage_progress"
+            android:layout_alignEnd="@id/detail_daily_fat_goal_percentage_progress"
+            android:text="2740"
+            android:textSize="10sp" />
+
+
+        <TextView
+            android:id="@+id/tv_percentage_daily_Protein_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_percentage_daily_text"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="10dp"
+            android:text="Fat"
+            android:textSize="10sp"
+
+            />
+
+        <ProgressBar
+            android:id="@+id/detail_daily_protein_goal_percentage_progress"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_percentage_daily_cal_text"
+            android:layout_alignStart="@id/tv_percentage_daily_Protein_text"
+            android:layout_marginEnd="20dp"
+            android:progress="20"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_percentage_daily_protien_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_daily_cal_goal_percentage_progress"
+            android:layout_alignStart="@id/tv_percentage_daily_Protein_text"
+            android:text="12%"
+            android:textSize="10sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_percentage_daily_protein_value_grams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_daily_protein_goal_percentage_progress"
+            android:layout_alignEnd="@id/detail_daily_protein_goal_percentage_progress"
+            android:text="2740"
+            android:textSize="10sp" />
+
+        <View
+            android:id="@+id/horizontal_line5"
+            style="@style/Divider"
+            android:layout_below="@id/tv_percentage_daily_protein_value_grams"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/tv_nutirition_fact_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line5"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#e1e1e1"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="Nutrition Facts"
+            android:textColor="@color/black_70" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_calorie_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nutirition_fact_text"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Calories" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_calorie_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nutirition_fact_text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="200" />
+
+        <View
+            android:id="@+id/horizontal_line6"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_calorie_text"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_total_fat_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line6"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Total Fat" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_toal_fat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line6"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="200" />
+
+
+        <View
+            android:id="@+id/horizontal_line7"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_toal_fat_value"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_saturated_fat_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line7"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Saturated" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_saturated_fat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line7"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="200" />
+
+        <View
+            android:id="@+id/horizontal_line8"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_saturated_fat_value"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fac_trans_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line8"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Trans" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_trans_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line8"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="20" />
+
+        <View
+            android:id="@+id/horizontal_line9"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_trans_value"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fac_polyunsaturated_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line9"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Polyunsaturated" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_polyunsaturated_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line9"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="20" />
+
+        <View
+            android:id="@+id/horizontal_line10"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_polyunsaturated_value"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fac_monounsaturated_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line10"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Monounsaturated" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_monounsaturated_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line10"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="20" />
+
+
+        <View
+            android:id="@+id/horizontal_line11"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_monounsaturated_value"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fac_cholesterol_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line11"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Cholesterol" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_cholesterol_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line11"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="20 mg" />
+
+        <View
+            android:id="@+id/horizontal_line12"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_cholesterol_value"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fac_sodium_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line12"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Sodium" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_sodium_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line12"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="320 mg" />
+
+        <View
+            android:id="@+id/horizontal_line13"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_sodium_value"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fac_total_carbohydrates_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line13"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Total Carbohydrates" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_total_carbohydrates_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line13"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="320 g" />
+
+        <View
+            android:id="@+id/horizontal_line14"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_total_carbohydrates_value"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fac_dietary_fiber_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line14"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Dietary Fiber" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_dietary_fiber_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line14"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="320 g" />
+
+        <View
+            android:id="@+id/horizontal_line15"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_dietary_fiber_value"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_sugars_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line15"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Sugars" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_sugars_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line15"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="30 g" />
+
+        <View
+            android:id="@+id/horizontal_line16"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_sugars_value"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_protein_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line16"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Protein" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_protein_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line16"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="30 g" />
+
+        <View
+            android:id="@+id/horizontal_line17"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_protein_value"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_vitamin_d_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line17"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Vitamin D" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_vitamin_d_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line17"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="30 g" />
+
+        <View
+            android:id="@+id/horizontal_line18"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_vitamin_d_value"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_calcium_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line18"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Calcium" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_calcium_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line18"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="30 g" />
+
+        <View
+            android:id="@+id/horizontal_line19"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_calcium_value"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_iron_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line19"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Iron" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_iron_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line19"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="30 g" />
+
+        <View
+            android:id="@+id/horizontal_line20"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_iron_value"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_potassium_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line20"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Potassium" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_potassium_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line20"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="30 mg" />
+
+        <View
+            android:id="@+id/horizontal_line21"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_potassium_value"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_vitamin_a_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line21"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Vitamin A" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_vitamin_a_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line21"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="30 mg" />
+
+        <View
+            android:id="@+id/horizontal_line22"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_vitamin_a_value"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_vitamin_c_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line22"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Vitamin C" />
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_vitamin_c_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line22"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="30 mg" />
+
+        <View
+            android:id="@+id/horizontal_line23"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_vitamin_c_text"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_detial_nutirition_fact_base_on_daily_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontal_line23"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:text="*Percent Daily Value are based on 2,000 calories diet. Your daily values may be higher or lower depending on your calories needs."
+            android:textSize="10sp" />
+
+        <View
+            android:id="@+id/horizontal_line24"
+            style="@style/Divider"
+            android:layout_below="@id/tv_detial_nutirition_fact_base_on_daily_text"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp" />
+
+    </RelativeLayout>
+</ScrollView>
